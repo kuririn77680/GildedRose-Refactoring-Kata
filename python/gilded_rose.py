@@ -2,21 +2,21 @@
 
 
 class Item:
-    def __init__(self, name: str, sell_in: int, quality: int):
+    def __init__(self, name: str, sell_in: int, quality: int) -> None:
         self.name = name
         self.sell_in = sell_in
         self.quality = quality
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return "%s, %s, %s" % (self.name, self.sell_in, self.quality)
 
 
 class GildedRose(object):
 
-    def __init__(self, items: list[Item]):
+    def __init__(self, items: list[Item]) -> None:
         self.items = items
 
-    def update_quality(self):
+    def update_quality(self) -> None:
         for item in self.items:
             if item.name != "Sulfuras, Hand of Ragnaros":
                 if item.name  == "Aged Brie":
